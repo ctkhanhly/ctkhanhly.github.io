@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Book Review | Ly Cao</title>
+<meta name="description" content="Book Review — Ly Cao">
+<link rel="icon" href="https://d10weyj3t86y7.cloudfront.net/assets/images/logo.jpg">
+<script>
+    (function () {
+        var stored = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (stored === 'dark' || (!stored && prefersDark)) {
+            document.documentElement.classList.add('dark');
+        }
+    })();
+</script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>tailwind.config = {"darkMode":"class","theme":{"extend":{"colors":{"surface-container":"#edeef0","on-secondary-container":"#003666","on-error-container":"#93000a","border-subtle":"#E5E5E7","secondary-container":"#51a0ff","surface-container-low":"#f3f3f5","primary-fixed":"#e4e2e4","on-secondary-fixed":"#001c3a","on-background":"#1a1c1d","secondary":"#005fae","tertiary-container":"#211c1b","tertiary-fixed-dim":"#cec4c2","surface":"#f9f9fb","secondary-fixed-dim":"#a5c8ff","surface-dim":"#d9dadc","surface-tint":"#5f5e60","tertiary-fixed":"#ebe0de","error-container":"#ffdad6","secondary-fixed":"#d4e3ff","surface-container-high":"#e8e8ea","on-surface-variant":"#46464a","on-surface":"#1a1c1d","on-error":"#ffffff","on-secondary":"#ffffff","text-dark":"#F2F2F2","inverse-surface":"#2f3132","tertiary":"#040302","on-tertiary-container":"#8c8382","background-dark":"#0A0A0A","on-primary-container":"#868587","border-dark":"#262626","on-secondary-fixed-variant":"#004785","background":"#f9f9fb","surface-bright":"#f9f9fb","surface-container-lowest":"#ffffff","error":"#ba1a1a","inverse-primary":"#c8c6c8","outline-variant":"#c7c6ca","on-primary-fixed-variant":"#474649","on-primary":"#ffffff","inverse-on-surface":"#f0f0f2","on-primary-fixed":"#1b1b1d","primary-container":"#1d1d1f","primary":"#030304","surface-variant":"#e2e2e4","surface-container-highest":"#e2e2e4","primary-fixed-dim":"#c8c6c8","on-tertiary-fixed":"#1f1a19","outline":"#77767b","on-tertiary-fixed-variant":"#4c4544","on-tertiary":"#ffffff"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"stack-lg":"48px","container-max":"1120px","stack-md":"16px","margin-mobile":"20px","sidebar-width":"260px","gutter":"32px","stack-sm":"8px"},"fontFamily":{"headline-md":["Hanken Grotesk"],"headline-lg":["Hanken Grotesk"],"headline-xl":["Hanken Grotesk"],"body-lg":["Inter"],"body-md":["Inter"],"label-mono":["JetBrains Mono"],"headline-xl-mobile":["Hanken Grotesk"],"serif":["Playfair Display","serif"]},"fontSize":{"headline-md":["24px",{"lineHeight":"1.3","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"1.2","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-xl":["48px",{"lineHeight":"1.1","letterSpacing":"-0.02em","fontWeight":"700"}],"body-lg":["18px",{"lineHeight":"1.6","fontWeight":"400"}],"body-md":["16px",{"lineHeight":"1.6","fontWeight":"400"}],"label-mono":["13px",{"lineHeight":"1.0","letterSpacing":"0.05em","fontWeight":"500"}],"headline-xl-mobile":["36px",{"lineHeight":"1.1","fontWeight":"700"}]}}}};</script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link href="/css/styles.css" rel="stylesheet">
+</head>
+<body class="bg-surface dark:bg-background-dark text-on-surface dark:text-text-dark min-h-screen flex flex-col antialiased ">
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-border-subtle dark:border-border-dark flex justify-between items-center px-margin-mobile md:px-stack-lg h-16 max-w-container-max mx-auto left-0 right-0">
+<a href="/" class="flex items-center gap-3 cursor-pointer active:scale-95 transition-transform hover:opacity-70 transition-opacity">
+<div class="w-[32px] h-[32px] overflow-hidden rounded-full border border-border-subtle dark:border-border-dark shrink-0">
+<img src="https://d10weyj3t86y7.cloudfront.net/assets/images/logo.jpg" alt="Ly Cao" class="w-full h-full object-cover">
+</div>
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-primary dark:text-text-dark font-bold">Ly Cao</span>
+</a>
+<span class="material-symbols-outlined text-on-surface-variant dark:text-on-tertiary-container hover:opacity-70 transition-opacity cursor-pointer active:scale-95 transition-transform" data-theme-toggle="">dark_mode</span>
+</header>
+<div class="flex flex-1 w-full max-w-[1200px] mx-auto relative pt-24">
+<aside class="side-nav flex flex-col shrink-0 py-6 px-3 border-r border-border-subtle dark:border-border-dark sticky top-16 h-[calc(100vh-4rem)] overflow-y-auto" data-side-nav="" data-collapsed="true">
+<button class="mb-6 flex items-center justify-center w-8 h-8 shrink-0 rounded-DEFAULT text-on-surface-variant dark:text-on-tertiary-container hover:bg-surface-container-low dark:hover:bg-white/5 transition-colors" data-side-nav-toggle="" aria-label="Toggle navigation" type="button">
+<span class="material-symbols-outlined text-[20px]">menu</span>
+</button>
+<nav class="flex flex-col gap-1">
+<a class="side-nav-link flex items-center gap-3 py-2 px-2 rounded-DEFAULT hover:bg-surface-container-low dark:hover:bg-white/5 transition-colors duration-200 text-on-surface-variant/70 dark:text-on-tertiary-container/70" href="/" title="Command">
+<span class="material-symbols-outlined text-[20px] shrink-0">keyboard_command_key</span>
+<span class="side-nav-label whitespace-nowrap ">Command</span>
+</a>
+<a class="side-nav-link flex items-center gap-3 py-2 px-2 rounded-DEFAULT hover:bg-surface-container-low dark:hover:bg-white/5 transition-colors duration-200 text-on-surface-variant/70 dark:text-on-tertiary-container/70" href="/tech-blogs/" title="Tech Blogs">
+<span class="material-symbols-outlined text-[20px] shrink-0">hub</span>
+<span class="side-nav-label whitespace-nowrap ">Tech Blogs</span>
+</a>
+<a class="side-nav-link flex items-center gap-3 py-2 px-2 rounded-DEFAULT hover:bg-surface-container-low dark:hover:bg-white/5 transition-colors duration-200 text-on-surface-variant/70 dark:text-on-tertiary-container/70" href="/code/" title="Code">
+<span class="material-symbols-outlined text-[20px] shrink-0">code</span>
+<span class="side-nav-label whitespace-nowrap ">Code</span>
+</a>
+<a class="side-nav-link flex items-center gap-3 py-2 px-2 rounded-DEFAULT hover:bg-surface-container-low dark:hover:bg-white/5 transition-colors duration-200 bg-surface-container-low dark:bg-white/5 text-primary dark:text-text-dark" href="/book-review/" title="Book Review">
+<span class="material-symbols-outlined text-[20px] shrink-0">menu_book</span>
+<span class="side-nav-label whitespace-nowrap font-medium">Book Review</span>
+</a>
+</nav>
+</aside>
+<main class="flex-1 min-w-0 w-full px-margin-mobile md:px-stack-lg py-stack-lg flex flex-col items-center">
+<div class="w-full max-w-container-max flex flex-col" data-keynav="">
+<header class="mb-stack-lg">
+<h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-primary dark:text-text-dark font-serif italic">Book Review</h1>
+
+</header>
+<div class="flex flex-col w-full relative">
+<div class="flex flex-col items-center justify-center py-24 text-center text-on-surface-variant dark:text-on-tertiary-container">
+<span class="material-symbols-outlined text-[40px] opacity-40 mb-4">menu_book</span>
+<p class="font-body-md text-body-md">No posts yet — check back soon.</p>
+</div>
+</div>
+</div>
+</main>
+</div>
+<footer class="w-full border-t border-border-subtle dark:border-border-dark mt-stack-lg">
+<div class="max-w-container-max mx-auto py-stack-md px-margin-mobile flex flex-col md:flex-row justify-between items-center opacity-60">
+<span class="font-label-mono text-label-mono uppercase text-on-surface-variant dark:text-on-tertiary-container mb-4 md:mb-0">&copy; 2026 Ly Cao</span>
+<div class="flex gap-6">
+<a class="font-label-mono text-label-mono uppercase text-on-surface-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-text-dark transition-colors" href="https://github.com/ctkhanhly/ctkhanhly.github.io">Source</a>
+<a class="font-label-mono text-label-mono uppercase text-on-surface-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-text-dark transition-colors" href="mailto:ctkhanhly@gmail.com">Contact</a>
+</div>
+</div>
+</footer>
+<script src="/js/sound.js"></script>
+<script src="/js/interactions.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "ctkhanhly.github.io",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Personal site — static build script for GitHub Pages",
+  "type": "commonjs",
+  "scripts": {
+    "build": "node build/build.js"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "marked": "^12.0.2"
+  }
+}

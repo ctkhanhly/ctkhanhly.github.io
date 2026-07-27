@@ -1,0 +1,5 @@
+docs/
+.agents/
+skills-lock.json
+assets/
+node_modules/
