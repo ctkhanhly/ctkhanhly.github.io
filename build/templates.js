@@ -9,6 +9,17 @@ const SECTIONS = [
     { slug: 'book-review', label: 'Book Review', description: '', icon: 'menu_book' },
 ];
 
+// Material Symbols has no brand/logo glyphs, so social links use small inline
+// SVGs (currentColor, so they pick up the surrounding text color/dark mode
+// automatically) instead of pulling in an icon-font dependency.
+const SOCIAL_LINKS = [
+    {
+        name: 'LinkedIn',
+        url: 'https://www.linkedin.com/in/ly-cao-996041170/',
+        svg: '<svg viewBox="0 0 24 24" fill="currentColor" class="w-full h-full"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.114 20.452H3.558V9h3.556v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>',
+    },
+];
+
 // Identical across all three docs/designs/*.html mockups.
 const TAILWIND_CONFIG = {
     darkMode: 'class',
@@ -146,6 +157,7 @@ function head({ title, description }) {
 // (#0A0A0A) — always pair dark: with -dark suffixed tokens, never bare
 // "background"/"surface", or dark mode silently no-ops.
 function header() {
+    const socialHtml = SOCIAL_LINKS.map((link) => `<a href="${link.url}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(link.name)}" class="w-5 h-5 text-on-surface-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-text-dark transition-colors active:scale-95 transition-transform">${link.svg}</a>`).join('\n');
     return `<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-border-subtle dark:border-border-dark flex justify-between items-center px-margin-mobile md:px-stack-lg h-16 max-w-container-max mx-auto left-0 right-0">
 <a href="/" class="flex items-center gap-3 cursor-pointer active:scale-95 transition-transform hover:opacity-70 transition-opacity">
 <div class="w-[32px] h-[32px] overflow-hidden rounded-full border border-border-subtle dark:border-border-dark shrink-0">
@@ -153,20 +165,11 @@ function header() {
 </div>
 <span class="font-label-mono text-label-mono uppercase tracking-widest text-primary dark:text-text-dark font-bold">Ly Cao</span>
 </a>
+<div class="flex items-center gap-5">
+${socialHtml}
 <span class="material-symbols-outlined text-on-surface-variant dark:text-on-tertiary-container hover:opacity-70 transition-opacity cursor-pointer active:scale-95 transition-transform" data-theme-toggle="">dark_mode</span>
+</div>
 </header>`;
-}
-
-function footer() {
-    return `<footer class="w-full border-t border-border-subtle dark:border-border-dark mt-stack-lg">
-<div class="max-w-container-max mx-auto py-stack-md px-margin-mobile flex flex-col md:flex-row justify-between items-center opacity-60">
-<span class="font-label-mono text-label-mono uppercase text-on-surface-variant dark:text-on-tertiary-container mb-4 md:mb-0">&copy; ${new Date().getFullYear()} Ly Cao</span>
-<div class="flex gap-6">
-<a class="font-label-mono text-label-mono uppercase text-on-surface-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-text-dark transition-colors" href="https://github.com/ctkhanhly/ctkhanhly.github.io">Source</a>
-<a class="font-label-mono text-label-mono uppercase text-on-surface-variant dark:text-on-tertiary-container hover:text-primary dark:hover:text-text-dark transition-colors" href="mailto:ctkhanhly@gmail.com">Contact</a>
-</div>
-</div>
-</footer>`;
 }
 
 function scripts() {
@@ -181,7 +184,6 @@ ${head({ title, description })}
 <body class="bg-surface dark:bg-background-dark text-on-surface dark:text-text-dark min-h-screen flex flex-col antialiased ${bodyClass || ''}">
 ${header()}
 ${mainHtml}
-${footer()}
 ${scripts()}
 </body>
 </html>
