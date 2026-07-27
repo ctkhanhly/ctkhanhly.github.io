@@ -1,7 +1,7 @@
 # ctkhanhly.github.io
 
 Personal site: a keyboard-navigable command palette on the home page leading
-into three sections — Tech Blogs, Code, and Book Review — each a list of
+into three sections — Tech Blogs, Code, and Book Reviews — each a list of
 markdown posts.
 
 ## How it works

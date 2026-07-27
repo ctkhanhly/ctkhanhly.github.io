@@ -6,7 +6,7 @@ const VIDEO_URL = 'https://d10weyj3t86y7.cloudfront.net/assets/videos/viet_coffe
 const SECTIONS = [
     { slug: 'tech-blogs', label: 'Tech Blogs', description: '', icon: 'hub' },
     { slug: 'code', label: 'Code', description: '', icon: 'code' },
-    { slug: 'book-review', label: 'Book Review', description: '', icon: 'menu_book' },
+    { slug: 'book-review', label: 'Book Reviews', description: '', icon: 'menu_book' },
 ];
 
 // Material Symbols has no brand/logo glyphs, so social links use small inline
